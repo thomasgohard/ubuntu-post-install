@@ -12,6 +12,7 @@ sudo apt -y install git libsecret-1-0 libsecret-1-dev jq moreutils apt-transport
 sudo apt update
 sudo apt -y install dotnet-sdk-3.1
 sudo snap install --classic code
+sudo snap install --classic ruby
 jq -n '{}' > $VSCODE_SETTINGS
 jq -r '. + {"telemetry.enableCrashReporter": false}' $VSCODE_SETTINGS | sponge $VSCODE_SETTINGS
 jq -r '. + {"telemetry.enableTelemetry": false}' $VSCODE_SETTINGS | sponge $VSCODE_SETTINGS
