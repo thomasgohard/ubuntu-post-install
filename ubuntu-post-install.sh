@@ -5,10 +5,13 @@ VSCODE_SETTINGS=~/.config/Code/User/settings.json
 wget https://packages.microsoft.com/config/ubuntu/19.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
+
 sudo apt update
 sudo apt -y upgrade
 sudo apt -y full-upgrade
-sudo apt -y install git libsecret-1-0 libsecret-1-dev jq moreutils apt-transport-https
+sudo apt -y install git libsecret-1-0 libsecret-1-dev jq moreutils apt-transport-https virtualbox-6.0
 sudo apt update
 sudo apt -y install dotnet-sdk-3.1
 sudo snap install --classic code
