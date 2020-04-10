@@ -8,7 +8,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt update
 sudo apt -y upgrade
 sudo apt -y full-upgrade
-sudo apt -y install git libsecret-1-0 libsecret-1-dev jq moreutils apt-transport-https ruby
+sudo apt -y install git libsecret-1-0 libsecret-1-dev jq moreutils apt-transport-https ruby ruby-dev
 sudo apt update
 sudo apt -y install dotnet-sdk-3.1
 sudo snap install --classic code
