@@ -19,6 +19,7 @@ jq -n '{}' > $VSCODE_SETTINGS
 jq -r '. + {"telemetry.enableCrashReporter": false}' $VSCODE_SETTINGS | sponge $VSCODE_SETTINGS
 jq -r '. + {"telemetry.enableTelemetry": false}' $VSCODE_SETTINGS | sponge $VSCODE_SETTINGS
 echo "export DOTNET_CLI_TELEMETRY_OPTOUT=1" | sudo tee /etc/profile.d/dotnet-telemetry.sh
+echo "export VAGRANT_DEFAULT_PROVIDER=virtualbox" | sudo tee /etc/profile.d/vagrant-default-provider.sh
 mkdir ~/git
 mkdir ~/vagrant
 (cd /usr/share/doc/git/contrib/credential/libsecret && sudo make)
