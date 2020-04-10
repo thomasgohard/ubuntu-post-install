@@ -20,4 +20,5 @@ mkdir ~/git
 (cd /usr/share/doc/git/contrib/credential/libsecret && sudo make)
 git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 rm packages-microsoft-prod.deb
-gem install github-pages
+gem install --user-install github-pages
+echo $'if which ruby >/dev/null && which gem >/dev/null; then\n\tPATH="$(ruby -r rubygems -e \'puts Gem.user_dir\')/bin:$PATH"\nfi' | tee -a ~/.bashrc
