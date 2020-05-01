@@ -11,7 +11,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.virtualbox.org/virtua
 sudo apt update
 sudo apt -y upgrade
 sudo apt -y full-upgrade
-sudo apt -y install git libsecret-1-0 libsecret-1-dev jq moreutils apt-transport-https virtualbox-6.0 vagrant
+sudo apt -y install git libsecret-1-0 libsecret-1-dev jq moreutils apt-transport-https virtualbox-6.0 vagrant python3.8
 sudo apt update
 sudo apt -y install dotnet-sdk-3.1
 sudo snap install --classic code
